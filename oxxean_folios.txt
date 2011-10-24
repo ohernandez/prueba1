@@ -1,0 +1,22 @@
+select naveid from nave where naveid in ('CA 6976','CB 9549','CB-2859')
+select * from nave
+--select naveid, folioid from folio where naveid not in (select naveid from nave)
+select distinct(naveid) from folio where naveid not in (select naveid from nave)
+select * from folio where naveid='CA 6976'
+select * from folio where naveid='CB 9549'
+select * from folio where naveid='CB-2859'
+
+select * from nave where nombre like '%TRAUCO CB-2859%'
+select * from nave where nombre like '%9549%'
+select * from nave where nombre like '%2859%'
+
+select * from nave order by nombre
+
+--ACTUALIZACACIONES
+
+select * from folio where naveid='CA 6976'
+--update folio set naveid='281' where naveid='CA 6976'
+select * from folio where naveid='CB 9549'
+--update folio set naveid='334' where naveid='CB 9549'
+select * from folio where naveid='CB-2859'
+--update folio set naveid='344' where naveid='CB-2859'
